@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>планувальник подій</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>планувальник подій</h1>
+
+    <form method="POST" class="event-form">
+        <input type="text" name="title" placeholder="Назва події" required>
+
+        <input type="date" name="date" required>
+
+        <input type="time" name="time" required>
+
+        <label class="label">пріоритет</label>
+        <select name="priority" required>
+            <option value="низький">низький</option>
+            <option value="середній">середній</option>
+            <option value="високий">високий</option>
+        </select>
+
+        <button type="submit"> додати</button>
+    </form>
+
+    <ul class="event-list">
+        {% for event in events %}
+        <li class="event {{ event.priority }}">
+            <div>
+                <strong>{{ event.title }}</strong><br>
+                {{ event.date }} | {{ event.time }}<br>
+                пріоритет: {{ event.priority }}
+            </div>
+            <a href="{{ url_for('delete_event', event_id=loop.index0) }}" class="delete">❌</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
