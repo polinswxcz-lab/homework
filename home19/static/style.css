@@ -1,0 +1,32 @@
+body{
+    font-family: Arial;
+    background:#ffe4f9;
+    text-align:center;
+    padding:50px;
+}
+
+h1{
+    color:#333;
+}
+
+nav{
+    margin:30px;
+}
+
+nav a{
+    margin:10px;
+    padding:12px 25px;
+    background:#ce7aba;
+    color:#ffffff;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+nav a:hover{
+    background:#ad5b9a;
+}
+
+.content{
+    margin-top:40px;
+    font-size:18px;
+}

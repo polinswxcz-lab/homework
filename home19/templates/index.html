@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мій Flask профіль</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h1>Мій Flask профіль</h1>
+
+<nav>
+    <a href="/">Головна</a>
+    <a href="/about">Про автора</a>
+    <a href="/skills">Навички</a>
+    <a href="/contact">Контакти</a>
+</nav>
+
+<div class="content">
+
+{% if page == "home" %}
+
+<h2>Головна сторінка</h2>
+<p>Це мій перший Flask сервер.</p>
+
+{% elif page == "about" %}
+
+<h2>Про автора</h2>
+<p>Мене звати Поліна. Я вивчаю програмування і створення сайтів.</p>
+
+{% elif page == "skills" %}
+
+<h2>Мої навички</h2>
+<p>HTML</p>
+<p>CSS</p>
+<p>Python</p>
+<p>Flask</p>
+
+{% elif page == "contact" %}
+
+<h2>Контакти</h2>
+<p>Email: polinswxcz@gmail.com</p>
+<p>Telegram: @polinswxcz</p>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
