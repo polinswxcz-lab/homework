@@ -1,0 +1,99 @@
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+text-transform:lowercase;
+}
+
+.normal{
+text-transform:none;
+}
+
+header{
+background:#333;
+padding:15px;
+text-align:center;
+}
+
+header a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+header a:hover{
+text-decoration:underline;
+}
+
+.container{
+width:800px;
+margin:30px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.button{
+display:inline-block;
+padding:10px 20px;
+background:#4CAF50;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+.field-label{
+color:#666;
+font-size:14px;
+display:block;
+margin-bottom:5px;
+}
+
+.task-form input,
+.task-form textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+box-sizing:border-box;
+}
+
+.task-form button{
+padding:10px;
+background:#4CAF50;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:6px;
+}
+
+.task{
+background:#fafafa;
+padding:15px;
+margin-top:15px;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+.complete{
+color:green;
+margin-right:10px;
+text-decoration:none;
+}
+
+.done{
+color:green;
+font-weight:bold;
+}
+
+.done-text{
+text-decoration:line-through;
+color:#777;
+}
+
+.delete{
+color:red;
+margin-left:10px;
+text-decoration:none;
+}

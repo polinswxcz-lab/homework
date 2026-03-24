@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>планувальник завдань</h1>
+
+<form method="POST" action="/add_task" class="task-form">
+
+<input type="text" name="title" placeholder="назва задачі" required>
+
+<textarea name="description" placeholder="опис задачі"></textarea>
+
+<label class="field-label">дата виконання (дд.мм.рррр)</label>
+<input type="date" name="due_date">
+
+<label class="field-label">час виконання</label>
+<input type="time" name="due_time">
+
+<button type="submit">додати</button>
+
+</form>
+
+<h2>список задач</h2>
+
+<div class="task-list">
+
+{% for task in tasks %}
+
+<div class="task">
+
+{% if task.completed == 0 %}
+
+<h3>{{ task.title }}</h3>
+
+<p>{{ task.description }}</p>
+
+<p>виконати до: {{ task.due_date }} {{ task.due_time }}</p>
+
+<small>створено: {{ task.created_at }}</small>
+
+<br><br>
+
+<a class="complete" href="/complete/{{ task.id }}">✔ зроблено</a>
+
+{% else %}
+
+<h3 class="done-text">{{ task.title }}</h3>
+
+<p class="done-text">{{ task.description }}</p>
+
+<p class="done-text">виконати до: {{ task.due_date }} {{ task.due_time }}</p>
+
+<span class="done">✔ завдання виконано</span>
+
+{% endif %}
+
+<a class="delete" href="/delete/{{ task.id }}">видалити</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
