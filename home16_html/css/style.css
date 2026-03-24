@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6;
+    text-align: left;
+}
+
+header {
+    background-color: #6d0000fd;
+    color: #fff;
+    padding: 20px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about img {
+    width: 200px;
+    border-radius: 10px;
+    gap: 30px;
+}
